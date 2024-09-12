@@ -1,0 +1,21 @@
+.active{
+
+    color: var(--fifth-color) !important;
+    border-color: var(--fifth-color) !important;
+    transform: translateY(-5px) !important;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 635px){
+
+    .active{
+
+        background-color: var(--fifth-color) !important;
+        color: var(--first-color) !important;
+        transform: translateY(0px) !important;
+
+    }
+
+}

@@ -1,0 +1,320 @@
+.container{
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 4.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+}
+
+.logo{
+
+    height: 50px;
+
+}
+
+.logo img{
+
+    height: 100%;
+
+}
+
+.nav ul{
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav ul a{
+
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--seconde-color);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.nav ul a:hover{
+
+    color: var(--fifth-color);
+    border-color: var(--fifth-color);
+    transform: translateY(-5px);
+
+}
+
+.actions{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.actions button{
+
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.actions button , .actions a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--seconde-color);
+    transition: 0.3s;
+
+}
+
+.actions span{
+
+    display: none;
+
+}
+
+.actions button:hover , .actions a:hover{
+
+    color: var(--fifth-color);
+
+}
+
+/* === nav-phone === */
+
+.nav_ph {
+
+    position: relative;
+    width: 35px;
+    height: 25px;
+    padding: 5px;
+    transition: 0.3s;
+    visibility: hidden;
+    display: none;
+
+}
+
+.nav_ph .nav_span {
+
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    display: inline-block;
+    border-radius: 25px;
+    border: 3px solid var(--seconde-color);
+    background-color: var(--seconde-color);
+
+}
+
+.nav_ph .nav_span:nth-child(1) {
+
+    top: 1px;
+    left: 0;
+    transition: 0.3s;
+
+}
+
+.nav_ph .nav_span:nth-child(2) {
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+
+.nav_ph .nav_span:nth-child(3) {
+
+    bottom: 1px;
+    left: 0;
+    transition: 0.3s;
+
+}
+
+.change {
+
+    rotate: 180deg;
+
+}
+
+.change .nav_span:nth-child(1) {
+
+    top: 50%;
+    left: 1px;
+    rotate: -45deg;
+
+}
+
+.change .nav_span:nth-child(2) {
+
+    opacity: 0;
+    left: -100%;
+
+}
+
+.change .nav_span:nth-child(3) {
+
+    top: 50%;
+    left: 0;
+    rotate: 45deg;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 930px){
+
+    .nav ul{
+
+        gap: 10px !important;
+
+    }
+
+    .nav ul a{
+
+        font-size: 14px !important;
+
+    }
+
+    .actions{
+
+        gap: 5px !important;
+
+    }
+
+    .actions svg{
+
+        font-size: 20px;
+
+    }
+
+}
+
+@media(max-width: 635px){
+
+    .nav{
+
+        position: fixed;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        padding: 40px 4.5%;
+        height: calc(100% - 89px);
+        background-color: var(--first-color);
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        transition: 0.3s;
+
+    }
+
+    .nav_ph {
+
+        display: flex;
+        visibility: visible;
+
+    }
+
+    .display_nav {
+
+        top: 89px;
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .nav ul{
+
+        flex-direction: column;
+
+    }
+
+    .nav ul a{
+
+        padding: 10px 20px !important;
+        text-align: center;
+        font-size: 18px !important;
+        border: none;
+        border-radius: 5px;
+
+    }
+
+    .nav ul a:hover{
+
+        background-color: var(--fifth-color) !important;
+        color: var(--first-color) !important;
+        transform: translateY(0px) !important;
+
+    }
+
+    .actions{
+
+        position: fixed;
+        bottom: 30px;
+        width: 91%;
+        gap: 10px !important;
+        flex-direction: column;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        transition: 0.3s;
+
+    }
+
+    .actions span{
+
+        display: contents;
+
+    }
+
+    .actions button{
+
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid var(--fifth-color);
+
+    }
+
+    .actions button , .actions a{
+
+        font-size: 16px;
+        color: var(--fifth-color);
+
+    }
+
+    .actions button:hover{
+
+        color: var(--first-color) !important;
+        background-color: var(--fifth-color) !important;
+
+    }
+
+    .actions button:hover .link{
+
+        color: var(--first-color) !important;
+
+    }
+
+    .display_actions {
+
+        bottom: 20px;
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+}
