@@ -1,0 +1,73 @@
+.dark_btn{
+
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--seconde-color);
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.dark_btn span {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mode_action {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.label {
+
+    display: none !important;
+
+}
+
+.dark_btn:hover {
+
+    color: var(--fifth-color);
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 635px){
+
+    .label{
+
+        display: contents !important;
+
+    }
+
+    .dark_btn{
+
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: var(--fifth-color);
+        border-radius: 5px;
+        border: 1px solid var(--fifth-color);
+
+    }
+
+    .dark_btn:hover {
+    
+        color: var(--constant-color) !important;
+        background-color: var(--fifth-color) !important;
+    
+    }
+
+}

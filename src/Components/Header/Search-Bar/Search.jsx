@@ -40,7 +40,13 @@ export default function Search({close}) {
 
             <form className={searchCSS.form}>
 
-                <motion.input variants={childVariants} type="text" placeholder='Search for bill...' />
+                <motion.div variants={childVariants} className={searchCSS.input_cont}>
+
+                    <div className={searchCSS.loader}></div>
+
+                    <input type="text" placeholder='Search for a bill'/>
+
+                </motion.div>
 
                 <motion.button whileTap={{scale : 0.95}} variants={childVariants} type='submit'>Search</motion.button>
 

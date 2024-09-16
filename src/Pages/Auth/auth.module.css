@@ -1,51 +1,22 @@
 .container{
 
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100svh;
+    min-height: 100vh;
+    padding: 100px 4.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    backdrop-filter: blur(10px);
-    z-index: 110;
+    gap: 50px;
 
 }
 
-.close{
+.dark_mode{
 
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-
-}
-
-.close svg{
-
-    font-size: 42px;
-    color: var(--seconde-color);
-
-}
-
-h3{
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 40px;
-    font-weight: 600;
-    color: var(--seconde-color);
-
-}
-
-h3 svg{
-
-    font-size: 20px !important;
-    color: var(--fifth-color);
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
 }
 
@@ -53,40 +24,51 @@ h3 svg{
 
     width: 100%;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
 
 }
 
-.input_cont{
+.form .input_cont{
 
     position: relative;
-    width: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
 }
 
-.form input{
+.form .input_cont.half{
 
-    height: 40px;
+    width: calc(50% - 10px) !important;
+
+}
+
+.input_cont label{
+
+    font-size: 18px;
+    color: var(--fifth-color);
+
+}
+
+.input_cont input{
+
     width: 100%;
+    height: 40px;
     padding: 0px 10px;
+    padding-right: 40px;
     font-size: 16px;
     color: var(--seconde-color);
-    outline: none;
     border-radius: 5px;
-    border: 2px solid var(--fifth-color);
-    background-color: var(--first-color);
+    border: 1px solid var(--fifth-color);
+    background-color: transparent;
+    outline: none;
 
 }
 
-.form input::placeholder{
-
-    color: var(--seconde-color);
-    opacity: 0.4;
-
-}
+/* ====== loader-style ====== */
 
 .loader {
 
@@ -106,7 +88,6 @@ h3 svg{
             var(--fifth-color) 0);
     background-size: 5px 400%;
     background-repeat: no-repeat;
-    animation: matrix 1s infinite linear;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
@@ -127,14 +108,29 @@ h3 svg{
 
     opacity: 1;
     visibility: visible;
+    animation: matrix 1s infinite linear;
+
+}
+
+.link{
+
+    width: 100%;
+
+}
+
+.link a{
+
+    font-size: 16px;
+    text-decoration: underline;
+    color: var(--seconde-color);
 
 }
 
 .form button{
 
-    height: 40px;
-    padding: 0px 20px;
-    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--constant-color);
     border: none;
@@ -146,11 +142,21 @@ h3 svg{
 
 /* ====== responsive-style ====== */
 
-@media(max-width: 635px){
+@media(max-width: 930px){
 
-    .input_cont , .form button{
+    .form .input_cont.half{
 
-        width: 91%;
+        width: 100% !important;
+
+    }
+
+}
+
+@media(max-width: 390px){
+
+    .input_cont label , .input_cont input , .link a , .form button{
+
+        font-size: 14px !important;
 
     }
 

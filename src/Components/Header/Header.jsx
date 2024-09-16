@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import NightsStayIcon from '@mui/icons-material/NightsStay';
 
 import headerCSS from './header.module.css';
 import './active.css';
 import Search from './Search-Bar/Search';
 import { AnimatePresence } from 'framer-motion';
+import Logo from '../Logo/Logo';
+import DarkMode from '../Dark-Mode/DarkMode';
 
 export default function Header() {
 
@@ -51,6 +52,7 @@ export default function Header() {
 
     const [displaySearch, setDisplaySearch] = useState(false);
 
+
     return<React.Fragment>
 
         <AnimatePresence>
@@ -61,11 +63,7 @@ export default function Header() {
 
         <header className={headerCSS.container}>
 
-            <div className={headerCSS.logo}>
-
-                <Link to={'/'}><img src={require('../../Images/logo.png')} alt="logo" /></Link>
-
-            </div>
+            <Logo />
 
             <div id='nav_ph' className={headerCSS.nav_ph}>
 
@@ -91,20 +89,17 @@ export default function Header() {
 
                 <button onClick={() => setDisplaySearch(true)}>
                     <SearchIcon />
-                    <span>Search</span>
+                    <span className={headerCSS.label}>Search</span>
                 </button>
 
                 <button>
                     <NavLink to={'/profile'} className={headerCSS.link}>
                         <AccountCircleOutlinedIcon />
-                        <span>Profile</span>
+                        <span className={headerCSS.label}>Profile</span>
                     </NavLink>
                 </button>
 
-                <button>
-                    <NightsStayIcon />
-                    <span>Dark</span>
-                </button>
+                <DarkMode />
 
             </div>
 

@@ -24,6 +24,15 @@
     --third-color: #666666;
     --forth-color: #FFA500;
     --fifth-color: #F4A261;
+    --constant-color: #FAF9F6;
+
+}
+
+body.dark_mode{
+
+    --first-color: #1C1C1C;
+    --seconde-color: #FFFFFF;
+    --fifth-color: #F39C12;
 
 }
 

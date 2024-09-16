@@ -69,6 +69,14 @@
 
 }
 
+.actions button span{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .actions button , .actions a{
 
     display: flex;
@@ -80,7 +88,16 @@
 
 }
 
-.actions span{
+.mode_action{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.actions .label{
 
     display: none;
 
@@ -254,7 +271,7 @@
     .nav ul a:hover{
 
         background-color: var(--fifth-color) !important;
-        color: var(--first-color) !important;
+        color: var(--constant-color) !important;
         transform: translateY(0px) !important;
 
     }
@@ -274,7 +291,7 @@
 
     }
 
-    .actions span{
+    .actions .label{
 
         display: contents;
 
@@ -298,14 +315,14 @@
 
     .actions button:hover{
 
-        color: var(--first-color) !important;
+        color: var(--constant-color) !important;
         background-color: var(--fifth-color) !important;
 
     }
 
     .actions button:hover .link{
 
-        color: var(--first-color) !important;
+        color: var(--constant-color) !important;
 
     }
 
