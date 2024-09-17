@@ -33,7 +33,7 @@ export default function LogAdmin() {
                 <DarkMode />
             </div>
 
-            <Logo height={60} />
+            <Logo height={60} goTo={'/logAdmin'} />
 
             <form className={logCSS.form}>
 

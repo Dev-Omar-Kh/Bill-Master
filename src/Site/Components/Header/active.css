@@ -1,4 +1,4 @@
-.active{
+.site.active{
 
     color: var(--fifth-color) !important;
     border-color: var(--fifth-color) !important;
@@ -10,7 +10,7 @@
 
 @media(max-width: 635px){
 
-    .active{
+    .site.active{
 
         background-color: var(--fifth-color) !important;
         color: var(--constant-color) !important;

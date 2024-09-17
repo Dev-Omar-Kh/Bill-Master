@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
-export default function Logo({height}) {
+export default function Logo({height , toggle , goTo}) {
 
     // ====== dark-mode-check ====== //
 
@@ -24,20 +24,20 @@ export default function Logo({height}) {
 
         <div className={logoCSS.logo}>
 
-            <Link to={'/'}>
+            <Link to={goTo}>
                 <AnimatePresence>
                     {darkMode 
                         ? <motion.img 
                             key={'logo-light'}
                             style={height ? {height} : {}}
                             variants={imageVariants} initial='hidden' animate='visible'
-                            src={require('../../Images/logo-light.png')} alt="logo" 
+                            src={require(toggle ? '../../Images/logo.png' :'../../Images/logo-light.png')} alt="logo" 
                         />
                         : <motion.img 
                             key={'logo-dark'}
                             style={height ? {height} : {}}
                             variants={imageVariants} initial='hidden' animate='visible'
-                            src={require('../../Images/logo.png')} alt="logo" 
+                            src={require(toggle ? '../../Images/logo-light.png' : '../../Images/logo.png')} alt="logo" 
                         />
                     }
                 </AnimatePresence>

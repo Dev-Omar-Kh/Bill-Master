@@ -1,0 +1,6 @@
+.admin.active{
+
+    color: var(--constant-color);
+    background-color: var(--fifth-toggle-color);
+
+}

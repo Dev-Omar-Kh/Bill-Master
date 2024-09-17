@@ -63,7 +63,7 @@ export default function Header() {
 
         <header className={headerCSS.container}>
 
-            <Logo />
+            <Logo goTo={'/'} />
 
             <div id='nav_ph' className={headerCSS.nav_ph}>
 
@@ -77,9 +77,9 @@ export default function Header() {
 
                 <ul>
 
-                    <NavLink to={'/'}><li>Home</li></NavLink>
-                    <NavLink to={'/bills'}><li>Bills</li></NavLink>
-                    <NavLink to={'/message'}><li>Messages</li></NavLink>
+                    <NavLink className={'site'} to={'/'}><li>Home</li></NavLink>
+                    <NavLink className={'site'} to={'/bills'}><li>Bills</li></NavLink>
+                    <NavLink className={'site'} to={'/message'}><li>Messages</li></NavLink>
 
                 </ul>
 

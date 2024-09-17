@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion , AnimatePresence } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleDarkMode } from '../../Redux/DarkSlice';
+import { toggleDarkMode } from '../../../Redux/DarkSlice';
 
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
 import darkCSS from './dark_mode.module.css';
 
-export default function DarkMode() {
+export default function DarkMode({color}) {
 
     // ====== dark-mode-active ====== //
 
@@ -26,7 +26,11 @@ export default function DarkMode() {
 
     return <React.Fragment>
 
-        <button className={darkCSS.dark_btn} onClick={() => dispatch(toggleDarkMode())}>
+        <button 
+            className={darkCSS.dark_btn} 
+            style={color ? {color : 'var(--toggle-color)'} : {}} 
+            onClick={() => dispatch(toggleDarkMode())}
+        >
 
             <AnimatePresence>
 

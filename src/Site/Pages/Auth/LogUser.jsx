@@ -33,7 +33,7 @@ export default function LogUser() {
                 <DarkMode />
             </div>
 
-            <Logo height={60} />
+            <Logo height={60} goTo={'/loginUsers'} />
 
             <form className={logCSS.form}>
 

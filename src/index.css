@@ -22,9 +22,18 @@
     --first-color: #FAF9F6;
     --seconde-color: #1F2A44;
     --third-color: #666666;
-    --forth-color: #FFA500;
+    --forth-color: #FFA600;
     --fifth-color: #F4A261;
     --constant-color: #FAF9F6;
+    --constant-dark-color: #1C1C1C;
+    --toggle-color: #1C1C1C;
+    --fifth-toggle-color: #F39C12;
+
+    /* === custom-color === */
+
+    --fifth-color-02: rgba(243, 156, 18, 0.2);
+    --bg-color-08: rgba(28, 28, 28, 0.8);
+    --bg-color-01: rgba(250, 249, 246);
 
 }
 
@@ -33,6 +42,13 @@ body.dark_mode{
     --first-color: #1C1C1C;
     --seconde-color: #FFFFFF;
     --fifth-color: #F39C12;
+    --toggle-color: #FAF9F6;
+    --fifth-toggle-color: #F4A261;
+
+    /* === custom-color === */
+
+    --fifth-color-02: rgba(255, 165, 0, 0.2);
+    --bg-color-01: rgba(28, 28, 28, 0.05);
 
 }
 

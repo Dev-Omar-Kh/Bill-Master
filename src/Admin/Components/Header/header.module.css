@@ -1,0 +1,176 @@
+.container{
+
+    width: 100%;
+    height: 60px;
+    padding: 10px 2.25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: var(--toggle-color);
+
+}
+
+.nav_ph{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+.nav_ph svg{
+
+    font-size: 36px;
+    color: var(--first-color);
+
+}
+
+.dark_mode{
+
+    height: 40px;
+    color: var(--first-color);
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.dark_mode span{
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+
+.dark_mode span p{
+
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.dark_mode:hover{
+
+    color: var(--fifth-toggle-color);
+
+}
+
+.search{
+
+    width: 40%;
+    height: 100%;
+
+}
+
+.form{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    background-color: var(--bg-color-01);
+    transition: 0.3s;
+
+}
+
+.form:focus-within {
+
+    border-color: var(--fifth-toggle-color);
+
+}
+
+.form input{
+
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: var(--constant-dark-color);
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.form input::-webkit-input-placeholder{
+
+    color: var(--constant-dark-color);
+    opacity: 0.6;
+
+}
+
+.form button{
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    color: var(--constant-color);
+    background-color: var(--fifth-toggle-color);
+    cursor: pointer;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 935px){
+
+    .search{
+
+        width: 50%;
+
+    }
+
+}
+
+@media(max-width: 750px){
+
+    .nav_ph{
+
+        display: contents;
+
+    }
+
+}
+
+@media(max-width: 585px){
+
+    .dark_mode span p{
+
+        display: none;
+
+    }
+
+    .search{
+
+        width: 60%;
+
+    }
+
+    .form input{
+
+        font-size: 12px;
+
+    }
+
+    .form button svg{
+
+        font-size: 18px;
+
+    }
+
+}

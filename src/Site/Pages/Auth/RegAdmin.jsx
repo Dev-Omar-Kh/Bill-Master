@@ -33,7 +33,7 @@ export default function RegAdmin() {
                 <DarkMode />
             </div>
 
-            <Logo height={60} />
+            <Logo height={60} goTo={'/regAdmin'} />
 
             <form className={logCSS.form}>
 

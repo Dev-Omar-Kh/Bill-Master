@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './Layout/Layout';
+import Layout from './Site/Layout/Layout';
 import { Provider, useSelector } from 'react-redux';
 import { Store } from './Redux/Store';
-import LogUser from './Pages/Auth/LogUser';
-import RegAdmin from './Pages/Auth/RegAdmin';
-import LogAdmin from './Pages/Auth/LogAdmin';
+import LogUser from './Site/Pages/Auth/LogUser';
+import RegAdmin from './Site/Pages/Auth/RegAdmin';
+import LogAdmin from './Site/Pages/Auth/LogAdmin';
+import LayoutAdmin from './Admin/Layout/LayoutAdmin';
 
 const routes = createBrowserRouter([
 
@@ -14,6 +15,8 @@ const routes = createBrowserRouter([
     {path : '/loginUsers' , element : <LogUser />},
     {path : '/regAdmin' , element : <RegAdmin />},
     {path : '/logAdmin' , element : <LogAdmin />},
+
+    {path : '/admin' , element : <LayoutAdmin />}
 
 ]);
 
